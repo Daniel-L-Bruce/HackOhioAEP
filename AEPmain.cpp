@@ -1,16 +1,44 @@
-#include 
+#include <set> // set data structures
+#include <string> // string data structures
+#include <sstream> // string streams
+#include <fstream> // file stream
+#include <iostream> // cin (>>) and cout (<<)
+#include <map> // map data structures
 
 using namespace std;
 
+
 class Classifier {
- private: // accessible only within the class to protect data from outside interference
- public: // members able to be modified outside of the class
- // First, your application should read posts from a file and use them to train the classifier. 
- // After training, your classifier abstraction should store the information.
- void train();
+    private: // accessible only within the class to protect data from outside interference
+    public: // members able to be modified outside of the class
+    // First, your application should read posts from a file and use them to train the classifier. 
+    // After training, your classifier abstraction should store the information.
+
+    // returns a set (unique words) of keywords using input string as argument
+    set<string> keywords(const string &str) {
+        istringstream source(str); // allows function to treat string argument as a stream of words
+        set<string> words; // empty set of strings initialization
+        string word; // string variable initialization
+        while (source >> word) { // uses extraction operator (>>) to read one word at a time from source
+        words.insert(word); // each word from source is inserted into the set without duplicates ensuring unique words
+        }
+        return words; // return set
+    } 
+
+    void train();
 
 
 };   // end of class Classifer
+
+// filepath must be in the format of the 
+map<string, set<string>> createMapFromInput(string filePath) {
+    // Create a file input stream from the given filePath
+    ifstream file(filePath);
+    // Create the map object
+    map<string, set<string>> output;
+
+}
+
 /* 
 1. Was high energy present?
     -Table of icons in appendix 2
