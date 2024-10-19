@@ -16,11 +16,11 @@ using namespace std;
         -Explosion
         -Electrical Contact with source greater than or equal to 50 Volts
         -High Dose of Toxic Chemical/Radiation
-        -Fall from greater than or equal to 4 feet
-        -When in vehicle going more than or equal to 300 mph
-        -Temperatures greater than or equal to 150 F
+        -Fall >= 4 feet
+        -When in vehicle going >= 300 mph
+        -Temperatures >= 150 F
         -Fire with sustained fuel source
-        -Excavation or Trench 5 feet deep
+        -Excavation or Trench >= 5 feet deep
         -Arc Flash
         -Tools, materials, or equipment which satisfies Height x Weight >= 500 or Speed x Weight >= 500
 2. Did a high-energy incident occur?
@@ -68,7 +68,7 @@ Low-Severity - These low-priority incidents are de-prioritized in the model beca
 have the potential to result in a SIF
 
 These are sorted based on learning prioritization
-in tiers(When multiple are present consider ): 
+in tiers(When multiple are present consider final classification as highest tier): 
 1:HSIF,PSIF,LSIF
 2: Capcity, sucess, exposure
 3: low severity
