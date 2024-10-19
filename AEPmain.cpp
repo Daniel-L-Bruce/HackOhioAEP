@@ -2,6 +2,15 @@
 
 using namespace std;
 
+class Classifier {
+ private: // accessible only within the class to protect data from outside interference
+ public: // members able to be modified outside of the class
+ // First, your application should read posts from a file and use them to train the classifier. 
+ // After training, your classifier abstraction should store the information.
+ void train();
+
+
+};   // end of class Classifer
 /* 
 1. Was high energy present?
     -Table of icons in appendix 2
